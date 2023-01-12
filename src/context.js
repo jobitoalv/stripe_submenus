@@ -6,6 +6,8 @@ const AppContex = React.createContext();
 
 const AppProvider = ({ children }) => {
     const [ isSidebarOpen, setIsSidebarOpen ] = useState(true);
+    const [ isSModalOpen, setIsModalOpen ] = useState(true);
+
     return <AppContex.Provider>
         {children}
     </AppContex.Provider>
