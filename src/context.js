@@ -4,7 +4,7 @@ import sublinks from './data'
 
 const AppContex = React.createContext();
 
-const AppProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
     const [ isSidebarOpen, setIsSidebarOpen ] = useState(true);
     const [ isSubmenuOpen, setIsSubmenuOpen ] = useState(true);
 
@@ -39,4 +39,8 @@ const AppProvider = ({ children }) => {
         {children}
     </AppContex.Provider>
     )
+}
+
+export const useGlobalContext = () => {
+    return useContext(AppContex)
 }
